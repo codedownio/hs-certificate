@@ -9,7 +9,8 @@ compiler: ghc-8.8 nightly-2019-09-29
 
 # options
 # option: alias x=y z=v
-option: cryptonitedeps extradep=cryptonite-0.25 extradep=basement-0.0.6 extradep=foundation-0.0.19 extradep=memory-0.14.14
+option: cryptonitedeps extradep=cryptonite-0.25 extradep=memory-0.14.14
+option: foundationdeps extradep=basement-0.0.11 extradep=foundation-0.0.25
 
 # builds
 # recognized simple options: nohaddock allow-newer allowed-failure

@@ -50,7 +50,7 @@ script:
       # create the build stack.yaml
       case "$RESOLVER" in
       ghc-8.0)
-        echo "{ resolver: lts-9.21, packages: [ x509/, x509-store/, x509-system/, x509-validation/, x509-util/ ], extra-deps: [ cryptonite-0.25, basement-0.0.6, foundation-0.0.19, memory-0.14.14 ], flags: {} }" > stack.yaml
+        echo "{ resolver: lts-9.21, packages: [ x509/, x509-store/, x509-system/, x509-validation/, x509-util/ ], extra-deps: [ basement-0.0.11, foundation-0.0.25, cryptonite-0.25, memory-0.14.14 ], flags: {} }" > stack.yaml
         stack --no-terminal build --install-ghc --coverage --test --bench --no-run-benchmarks --haddock --no-haddock-deps
         ;;
       ghc-8.2)
@@ -58,7 +58,7 @@ script:
         stack --no-terminal build --install-ghc --coverage --test --bench --no-run-benchmarks --haddock --no-haddock-deps
         ;;
       ghc-8.4)
-        echo "{ resolver: lts-12.9, packages: [ x509/, x509-store/, x509-system/, x509-validation/, x509-util/ ], extra-deps: [], flags: {} }" > stack.yaml
+        echo "{ resolver: lts-12.9, packages: [ x509/, x509-store/, x509-system/, x509-validation/, x509-util/ ], extra-deps: [ basement-0.0.11, foundation-0.0.25 ], flags: {} }" > stack.yaml
         stack --no-terminal build --install-ghc --coverage --no-test --no-bench --haddock --no-haddock-deps
         ;;
       ghc-8.6)
@@ -80,5 +80,3 @@ script:
       ;;
   esac
   set +ex
-
-
